@@ -63,7 +63,7 @@ const Contacts = () => {
                     <h1 className="display-4 text-center">Contact Register</h1>
                 </div>
             </div>
-            <div className="row">
+            <div className="row abc">
                 <div className="col-md-5">
                     <ContactForm {...({ addOrEdit, currentId, contactObjects })} />
                 </div>
@@ -74,6 +74,7 @@ const Contacts = () => {
                                 <th>Full Name</th>
                                 <th>Mobile</th>
                                 <th>Email</th>
+                                <th>Address</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -84,6 +85,7 @@ const Contacts = () => {
                                         <td>{contactObjects[id].fullName}</td>
                                         <td>{contactObjects[id].mobile}</td>
                                         <td>{contactObjects[id].email}</td>
+                                        <td>{contactObjects[id].address}</td>
                                         <td>
                                             <a className="btn text-primary" onClick={() => { setCurrentId(id) }}>
                                                 <i className="fas fa-pencil-alt"></i>
